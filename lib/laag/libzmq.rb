@@ -8,7 +8,7 @@ module LAAG
   LIBZMQ_ORIGIN   = 'github.com/zeromq/libzmq'
   LIBZMQ_VERSION  = (
     $LOADED_FEATURES
-      .map { |f| f.match %r{^laag-libzmq-(?<version>[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+)} }
+      .map { |f| f.match %r{/laag-libzmq-(?<version>[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+)} }
       .compact
       .map { |gem| gem['version'] }
       .uniq
