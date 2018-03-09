@@ -16,9 +16,7 @@ module LAAG
   ) || (
     File
       .basename(LIBZMQ_GEM_ROOT)
-      .match(%r{^laag-libzmq-(?<version>[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+)})
-      .named_captures
-      .fetch('version')
+      .match(%r{^laag-libzmq-(?<version>[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+)})['version']
   )
 
   def self.libzmq
